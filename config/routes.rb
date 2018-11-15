@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     patch   "/users/:id"  =>  "users#update"
     delete  "/users/:id"  =>  "users#destroy"
 
-    get "/cohorts"  =>  "cohorts#index"
+    get "/cohorts"      =>  "cohorts#index"
+    get "/cohorts/:id"  =>  "cohorts#show"
   end
 end

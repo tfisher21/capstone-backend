@@ -5,8 +5,22 @@ class Cohort < ApplicationRecord
   def owner_visible
     {
       id: owner.id,
-      name: "#{owner.first_name} #{owner.last_name}",
+      name: owner.full_name,
       email: owner.email
     }
+  end
+
+  def cohort_members
+    members = []
+    users.each do |user|
+      members << {
+        id: user.id,
+        name: user.full_name,
+        email: user.email,
+        post_cohort_employer: user.post_cohort_employer
+      }
+    end
+
+    members
   end
 end
