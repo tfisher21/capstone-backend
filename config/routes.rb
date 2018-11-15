@@ -18,5 +18,7 @@ Rails.application.routes.draw do
     patch   "/posts/:id"  =>  "posts#update"
     delete  "/posts/:id"  =>  "posts#destroy"
 
+    # POST_COMMENTS
+    post    "/post_comments"  => "post_comments#create"
   end
 end
