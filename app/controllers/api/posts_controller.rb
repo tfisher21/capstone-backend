@@ -22,4 +22,23 @@ class Api::PostsController < ApplicationController
 
     render "show.json.jbuilder"
   end
+
+  def update
+    @post = Post.find_by(id: params[:id])
+
+    @post.title = params[:title] || @post.title
+    @post.content = params[:content] || @post.content
+
+    @post.save
+
+    render "show.json.jbuilder"
+  end
+
+  def destroy
+    @post = Post.find_by(id: params[:id])
+
+    @post.destroy
+
+    render json: {message: "Post Destroyed"}
+  end
 end
