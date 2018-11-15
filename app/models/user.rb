@@ -7,6 +7,7 @@ class User < ApplicationRecord
   def cohort_visible
     if cohort
       {
+        id: cohort.id,
         name: cohort.name,
         start: cohort.start,
         end: cohort.end
