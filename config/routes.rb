@@ -22,5 +22,8 @@ Rails.application.routes.draw do
     post    "/post_comments"      => "post_comments#create"
     patch   "/post_comments/:id"  => "post_comments#update"
     delete  "/post_comments/:id"  => "post_comments#destroy"
+
+    # SESSIONS
+    post    "/sessions" => "sessions#create"
   end
 end
