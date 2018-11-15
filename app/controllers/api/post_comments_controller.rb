@@ -20,4 +20,12 @@ class Api::PostCommentsController < ApplicationController
 
     redirect_to "/api/posts/#{@comment.post_id}"
   end
+
+  def destroy
+    @comment = PostComment.find_by(id: params[:id])
+
+    @comment.destroy
+
+    render json: {message: "comment deleted"}
+  end
 end

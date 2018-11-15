@@ -19,7 +19,8 @@ Rails.application.routes.draw do
     delete  "/posts/:id"  =>  "posts#destroy"
 
     # POST_COMMENTS
-    post      "/post_comments"      => "post_comments#create"
-    patch     "/post_comments/:id"  => "post_comments#update"
+    post    "/post_comments"      => "post_comments#create"
+    patch   "/post_comments/:id"  => "post_comments#update"
+    delete  "/post_comments/:id"  => "post_comments#destroy"
   end
 end
