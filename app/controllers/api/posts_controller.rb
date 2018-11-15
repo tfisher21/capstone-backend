@@ -16,4 +16,10 @@ class Api::PostsController < ApplicationController
 
     render "show.json.jbuilder"
   end
+
+  def show
+    @post = Post.find_by(id: params[:id])
+
+    render "show.json.jbuilder"
+  end
 end
