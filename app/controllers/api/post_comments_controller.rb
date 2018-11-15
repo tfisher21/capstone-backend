@@ -1,13 +1,23 @@
 class Api::PostCommentsController < ApplicationController
   def create
-    @post_comment = PostComment.new(
+    @comment = PostComment.new(
       content: params[:content],
       user_id: params[:user_id],
       post_id: params[:post_id]
     )
 
-    @post_comment.save
+    @comment.save
 
-    redirect_to "/api/posts/#{@post_comment.post_id}"
+    redirect_to "/api/posts/#{@comment.post_id}"
+  end
+
+  def update
+    @comment = PostComment.find_by(id: params[:id])
+
+    @comment.content = params[:content] || @comment.content
+
+    @comment.save
+
+    redirect_to "/api/posts/#{@comment.post_id}"
   end
 end
