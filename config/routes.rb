@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     get "/cohorts"      =>  "cohorts#index"
     get "/cohorts/:id"  =>  "cohorts#show"
 
-    get "/posts"  =>  "posts#index"
+    get   "/posts"    =>  "posts#index"
+    post  "/posts"   =>   "posts#create"
   end
 end

@@ -4,4 +4,16 @@ class Api::PostsController < ApplicationController
 
     render "index.json.jbuilder"
   end
+
+  def create
+    @post = Post.new(
+      title: params[:title],
+      content: params[:content],
+      user_id: params[:user_id]
+    )
+
+    @post.save
+
+    render "show.json.jbuilder"
+  end
 end
