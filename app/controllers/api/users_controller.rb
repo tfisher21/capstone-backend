@@ -1,4 +1,6 @@
 class Api::UsersController < ApplicationController
+  before_action :authenticate_user
+
   def index
     @users = User.all
 
@@ -27,23 +29,31 @@ class Api::UsersController < ApplicationController
   end
 
   def update
-    @user = User.find_by(id: params[:id])
+    puts current_user.id
+    if current_user.id.to_i == params[:id].to_i
+      @user = User.find_by(id: current_user.id)
 
-    @user.first_name = params[:first_name] || @user.first_name
-    @user.last_name = params[:last_name] || @user.last_name
-    @user.email = params[:email] || @user.email
-    @user.post_cohort_employer = params[:post_cohort_employer] || @user.post_cohort_employer
-    @user.cohort_id = params[:cohort_id] || @user.cohort_id
+      @user.first_name = params[:first_name] || @user.first_name
+      @user.last_name = params[:last_name] || @user.last_name
+      @user.email = params[:email] || @user.email
+      @user.post_cohort_employer = params[:post_cohort_employer] || @user.post_cohort_employer
 
-    @user.save!
+      @user.save!
 
-    render "show.json.jbuilder"
+      render "show.json.jbuilder"
+    else
+      render json: {}, status: 401
+    end
   end
 
   def destroy
-    @user = User.find_by(id: params[:id])
-    @user.destroy
+    if current_user.id.to_i == params[:id].to_i
+      @user = User.find_by(id: params[:id])
+      @user.destroy
 
-    render json: {message: "User Deleted."}
+      render json: {message: "User Deleted."}
+    else
+      render json: {}, status: 401
+    end
   end
 end

@@ -1,4 +1,6 @@
 class Api::CohortsController < ApplicationController
+  before_action :authenticate_user, except: :index
+
   def index
     @cohorts = Cohort.all
 
