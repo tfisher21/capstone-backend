@@ -18,7 +18,7 @@ class Api::PostsController < ApplicationController
     @post = Post.new(
       title: params[:title],
       content: params[:content],
-      user_id: params[:user_id]
+      user_id: current_user.id
     )
 
     @post.save
@@ -35,19 +35,27 @@ class Api::PostsController < ApplicationController
   def update
     @post = Post.find_by(id: params[:id])
 
-    @post.title = params[:title] || @post.title
-    @post.content = params[:content] || @post.content
+    if current_user.id.to_i == @post.user.id.to_i
+      @post.title = params[:title] || @post.title
+      @post.content = params[:content] || @post.content
 
-    @post.save
+      @post.save
 
-    render "show.json.jbuilder"
+      render "show.json.jbuilder"
+    else
+      render json: {message: "You Must Log In"}, status: 401
+    end
   end
 
   def destroy
     @post = Post.find_by(id: params[:id])
 
-    @post.destroy
+    if current_user.id.to_i == @post.user.id.to_i
+      @post.destroy
 
-    render json: {message: "Post Destroyed"}
+      render json: {message: "Post Destroyed"}
+    else
+      render json: {message: "You Must Log In"}, status: 401
+    end
   end
 end
