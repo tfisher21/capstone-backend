@@ -1,8 +1,16 @@
 class Api::PostsController < ApplicationController
   before_action :authenticate_user
-  
+
   def index
     @posts = Post.all
+
+    if params[:cohort_id]
+      cohort = Cohort.find_by(id: params[:cohort_id])
+      @posts = cohort.posts
+    else
+      @posts = Post.all
+      @posts = @posts.order(created_at: :desc)
+    end
 
     render "index.json.jbuilder"
   end

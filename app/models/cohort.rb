@@ -23,4 +23,15 @@ class Cohort < ApplicationRecord
 
     members
   end
+
+  def posts
+    posts = []
+    users.each do |user|
+      user.posts.each do |post|
+        posts << post
+      end
+    end
+    posts.sort_by! { |post| post.created_at }
+    posts.reverse
+  end
 end
