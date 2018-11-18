@@ -3,30 +3,40 @@ class Api::PostCommentsController < ApplicationController
   def create
     @comment = PostComment.new(
       content: params[:content],
-      user_id: params[:user_id],
+      user_id: current_user.id,
       post_id: params[:post_id]
     )
 
     @comment.save
 
-    redirect_to "/api/posts/#{@comment.post_id}"
+    # redirect_to "/api/posts/#{@comment.post_id}"
+    render json: {msg: "Commnent Created"}
   end
 
   def update
     @comment = PostComment.find_by(id: params[:id])
 
-    @comment.content = params[:content] || @comment.content
+    if current_user.id.to_i == @comment.user.id.to_i
+      @comment.content = params[:content] || @comment.content
 
-    @comment.save
+      @comment.save
 
-    redirect_to "/api/posts/#{@comment.post_id}"
+      # redirect_to "/api/posts/#{@comment.post_id}"
+      render json: {msg: "Commnent Updated"}
+
+    else
+      render json: {}, status: 401
+    end
   end
 
   def destroy
     @comment = PostComment.find_by(id: params[:id])
 
-    @comment.destroy
-
-    render json: {message: "comment deleted"}
+    if current_user.id.to_i == @comment.user.id.to_i
+      @comment.destroy
+      render json: {message: "comment deleted"}
+    else
+      render json: {}, status: 401
+    end
   end
 end
