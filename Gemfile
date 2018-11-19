@@ -24,6 +24,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'bcrypt', '~> 3.1.7'
 # JSON Web Tokens
 gem 'jwt'
+# User rack-cors to allow cross-orgin referencing
+gem 'rack-cors', require: 'rack/cors'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
