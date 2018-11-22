@@ -1,5 +1,5 @@
 class Api::UsersController < ApplicationController
-  before_action :authenticate_user
+  before_action :authenticate_user, except: :create
 
   def index
     @users = User.all
@@ -47,13 +47,9 @@ class Api::UsersController < ApplicationController
   end
 
   def destroy
-    if current_user.id.to_i == params[:id].to_i
-      @user = User.find_by(id: params[:id])
-      @user.destroy
+    @user = User.find_by(id: params[:id])
+    @user.destroy
 
-      render json: {message: "User Deleted."}
-    else
-      render json: {}, status: 401
-    end
+    render json: {message: "User Deleted."}
   end
 end
