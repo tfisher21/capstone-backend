@@ -21,9 +21,11 @@ class Api::PostsController < ApplicationController
       user_id: current_user.id
     )
 
-    @post.save
-
-    render "show.json.jbuilder"
+    if @post.save
+      render "show.json.jbuilder"
+    else
+      render json: {errors: @post.errors.full_messages}, status: 422
+    end
   end
 
   def show
@@ -39,9 +41,11 @@ class Api::PostsController < ApplicationController
       @post.title = params[:title] || @post.title
       @post.content = params[:content] || @post.content
 
-      @post.save
-
-      render "show.json.jbuilder"
+      if @post.save
+        render "show.json.jbuilder"
+      else
+        render json: {errors: @post.errors.full_messages}, status: 422
+      end
     else
       render json: {message: "You Must Log In"}, status: 401
     end
