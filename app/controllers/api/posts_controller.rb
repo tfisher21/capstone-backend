@@ -4,7 +4,7 @@ class Api::PostsController < ApplicationController
   def index
 
     if params[:sort_by_cohort] == "true"
-      cohort = Cohort.find_by(id: current_user.id)
+      cohort = Cohort.find_by(id: current_user.cohort_id)
       @posts = cohort.posts
     else
       @posts = Post.all
