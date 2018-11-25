@@ -7,10 +7,10 @@ class Api::PostCommentsController < ApplicationController
       post_id: params[:post_id]
     )
 
-    @comment.save
+    @comment.save!
 
     # redirect_to "/api/posts/#{@comment.post_id}"
-    render json: {msg: "Commnent Created"}
+    render json: @comment.display_comment
   end
 
   def update
