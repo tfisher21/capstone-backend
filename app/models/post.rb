@@ -11,4 +11,12 @@ class Post < ApplicationRecord
   def cohort_id
     user.cohort_id
   end
+
+  def display_comments
+    display = []
+    post_comments.each do |comment|
+      display << comment.display_comment
+    end
+    display
+  end
 end

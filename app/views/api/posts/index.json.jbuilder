@@ -5,5 +5,5 @@ json.array! @posts.each do |post|
   json.author post.user.full_name
   json.created_at post.created_at
   json.updated_at post.updated_at
-  json.comments post.comment_count
+  json.comments post.display_comments
 end
