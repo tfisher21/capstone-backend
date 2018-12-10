@@ -24,7 +24,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'bcrypt', '~> 3.1.7'
 # JSON Web Tokens
 gem 'jwt'
-
+# User rack-cors to allow cross-orgin referencing
+gem 'rack-cors', require: 'rack/cors'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
@@ -44,8 +45,7 @@ group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
-  # User rack-cors to allow cross-orgin referencing
-  gem 'rack-cors', require: 'rack/cors'
+
 end
 
 
