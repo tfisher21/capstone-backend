@@ -25,5 +25,10 @@ Rails.application.routes.draw do
 
     # SESSIONS
     post    "/sessions" => "sessions#create"
+
+    # SMS
+    get "/sms/send"  =>  "sms#send_text"
+    get "/sms/receive"  =>  "sms#receive_text"
   end
+
 end
