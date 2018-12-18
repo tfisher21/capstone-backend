@@ -5,3 +5,4 @@ json.email @user.email
 json.post_cohort_employer @user.post_cohort_employer
 json.cohort @user.cohort_visible
 json.posts @user.posts
+json.posts @user.avatar

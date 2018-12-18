@@ -5,7 +5,7 @@
 # ##
 # ##   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 # ##   Character.create(name: 'Luke', movie: movies.first)
-
+require 'faker'
 # User Seeds
 User.create([
     {
@@ -14,7 +14,8 @@ User.create([
       email: "gdaniels@example.com",
       password: "password",
       post_cohort_employer: "Actualize",
-      cohort_id: nil
+      cohort_id: nil,
+      avatar: Faker::Avatar.image
     },
     {
       first_name: "Michael",
@@ -22,7 +23,8 @@ User.create([
       email: "mschur@example.com",
       password: "password",
       post_cohort_employer: "Actualize",
-      cohort_id: nil
+      cohort_id: nil,
+      avatar: Faker::Avatar.image
     },
     {
       first_name: "Eleanor",
@@ -30,7 +32,8 @@ User.create([
       email: "eshellstrop@example.com",
       password: "password",
       post_cohort_employer: "",
-      cohort_id: 3
+      cohort_id: 3,
+      avatar: Faker::Avatar.image
     },
     {
       first_name: "Chidi",
@@ -38,7 +41,8 @@ User.create([
       email: "canagonye@example.com",
       password: "password",
       post_cohort_employer: "",
-      cohort_id: 3
+      cohort_id: 3,
+      avatar: Faker::Avatar.image
     },
     {
       first_name: "Tahani",
@@ -46,7 +50,8 @@ User.create([
       email: "tal-jamil@example.com",
       password: "password",
       post_cohort_employer: "",
-      cohort_id: 3
+      cohort_id: 3,
+      avatar: Faker::Avatar.image
     },
     {
       first_name: "Jason",
@@ -54,7 +59,8 @@ User.create([
       email: "jmendoza@example.com",
       password: "password",
       post_cohort_employer: "",
-      cohort_id: 3
+      cohort_id: 3,
+      avatar: Faker::Avatar.image
     },
     {
       first_name: "Leslie",
@@ -62,7 +68,8 @@ User.create([
       email: "lknope@example.com",
       password: "password",
       post_cohort_employer: "Dept. of National Parks",
-      cohort_id: 2
+      cohort_id: 2,
+      avatar: Faker::Avatar.image
     },
     {
       first_name: "Ron",
@@ -70,7 +77,8 @@ User.create([
       email: "rswanson@example.com",
       password: "password",
       post_cohort_employer: "Very Good Building & Development Co.",
-      cohort_id: 2
+      cohort_id: 2,
+      avatar: Faker::Avatar.image
     },
     {
       first_name: "Tom",
@@ -78,7 +86,8 @@ User.create([
       email: "thaverford@example.com",
       password: "password",
       post_cohort_employer: "Tom's Bistro",
-      cohort_id: 2
+      cohort_id: 2,
+      avatar: Faker::Avatar.image
     },
     {
       first_name: "Ann",
@@ -86,7 +95,8 @@ User.create([
       email: "aperkins@example.com",
       password: "password",
       post_cohort_employer: "Ann Arbor General Hospital",
-      cohort_id: 2
+      cohort_id: 2,
+      avatar: Faker::Avatar.image
     },
     {
       first_name: "Andy",
@@ -94,7 +104,8 @@ User.create([
       email: "adwyer@example.com",
       password: "password",
       post_cohort_employer: "Johnny Karate Media",
-      cohort_id: 2
+      cohort_id: 2,
+      avatar: Faker::Avatar.image
     },
     {
       first_name: "April",
@@ -102,7 +113,8 @@ User.create([
       email: "aludgate-dwyer@example.com",
       password: "password",
       post_cohort_employer: "American Service Foundation",
-      cohort_id: 2
+      cohort_id: 2,
+      avatar: Faker::Avatar.image
     },
     {
       first_name: "Donna",
@@ -110,7 +122,8 @@ User.create([
       email: "dmeagle@example.com",
       password: "password",
       post_cohort_employer: "Regal Meagle Realty",
-      cohort_id: 2
+      cohort_id: 2,
+      avatar: Faker::Avatar.image
     },
     {
       first_name: "Jerry",
@@ -118,7 +131,8 @@ User.create([
       email: "jgergich@example.com",
       password: "password",
       post_cohort_employer: "Retired",
-      cohort_id: 2
+      cohort_id: 2,
+      avatar: Faker::Avatar.image
     },
     {
       first_name: "Ben",
@@ -126,7 +140,8 @@ User.create([
       email: "bwyatt@example.com",
       password: "password",
       post_cohort_employer: "U.S. Senate",
-      cohort_id: 2
+      cohort_id: 2,
+      avatar: Faker::Avatar.image
     },
     {
       first_name: "Chris",
@@ -134,7 +149,8 @@ User.create([
       email: "ctraeger@example.com",
       password: "password",
       post_cohort_employer: "University of Michigan",
-      cohort_id: 2
+      cohort_id: 2,
+      avatar: Faker::Avatar.image
     },
     {
       first_name: "Michael",
@@ -142,7 +158,8 @@ User.create([
       email: "mscott@example.com",
       password: "password",
       post_cohort_employer: "",
-      cohort_id: 1
+      cohort_id: 1,
+      avatar: Faker::Avatar.image
     },
     {
       first_name: "Jim",
@@ -150,7 +167,8 @@ User.create([
       email: "jhalpert@example.com",
       password: "password",
       post_cohort_employer: "Athlead",
-      cohort_id: 1
+      cohort_id: 1,
+      avatar: Faker::Avatar.image
     },
     {
       first_name: "Pam",
@@ -158,7 +176,8 @@ User.create([
       email: "phalpert@example.com",
       password: "password",
       post_cohort_employer: "New York Art Institute",
-      cohort_id: 1
+      cohort_id: 1,
+      avatar: Faker::Avatar.image
     },
     {
       first_name: "Dwight",
@@ -166,7 +185,8 @@ User.create([
       email: "dschrute@example.com",
       password: "password",
       post_cohort_employer: "Dunder-Mifflin",
-      cohort_id: 1
+      cohort_id: 1,
+      avatar: Faker::Avatar.image
     },
     {
       first_name: "Andy",
@@ -174,7 +194,8 @@ User.create([
       email: "abernard@example.com",
       password: "password",
       post_cohort_employer: "Cornell University",
-      cohort_id: 1
+      cohort_id: 1,
+      avatar: Faker::Avatar.image
     },
     {
       first_name: "Stanley",
@@ -182,7 +203,8 @@ User.create([
       email: "shudson@example.com",
       password: "password",
       post_cohort_employer: "Retired",
-      cohort_id: 1
+      cohort_id: 1,
+      avatar: Faker::Avatar.image
     },
     {
       first_name: "Daryl",
@@ -190,7 +212,8 @@ User.create([
       email: "dphilbin@example.com",
       password: "password",
       post_cohort_employer: "Athlead",
-      cohort_id: 1
+      cohort_id: 1,
+      avatar: Faker::Avatar.image
     },
     {
       first_name: "Phyllis",
@@ -198,7 +221,8 @@ User.create([
       email: "pvance@example.com",
       password: "password",
       post_cohort_employer: "Vance Refrigeration",
-      cohort_id: 1
+      cohort_id: 1,
+      avatar: Faker::Avatar.image
     },
     {
       first_name: "Meredith",
@@ -206,7 +230,8 @@ User.create([
       email: "mpalmer@example.com",
       password: "password",
       post_cohort_employer: "Dunder-Mifflin",
-      cohort_id: 1
+      cohort_id: 1,
+      avatar: Faker::Avatar.image
     },
     {
       first_name: "Creed",
@@ -214,7 +239,8 @@ User.create([
       email: "cbratton@example.com",
       password: "password",
       post_cohort_employer: "",
-      cohort_id: 1
+      cohort_id: 1,
+      avatar: Faker::Avatar.image
     },
     {
       first_name: "Kelly",
@@ -222,7 +248,8 @@ User.create([
       email: "kkapur@example.com",
       password: "password",
       post_cohort_employer: "Miami University",
-      cohort_id: 1
+      cohort_id: 1,
+      avatar: Faker::Avatar.image
     },
     {
       first_name: "Ryan",
@@ -230,7 +257,8 @@ User.create([
       email: "rhoward@example.com",
       password: "password",
       post_cohort_employer: "Wuphf.com",
-      cohort_id: 1
+      cohort_id: 1,
+      avatar: Faker::Avatar.image
     },
     {
       first_name: "Oscar",
@@ -238,7 +266,8 @@ User.create([
       email: "omartinex@example.com",
       password: "password",
       post_cohort_employer: "PA State Senate",
-      cohort_id: 1
+      cohort_id: 1,
+      avatar: Faker::Avatar.image
     },
     {
       first_name: "Angela",
@@ -246,7 +275,8 @@ User.create([
       email: "amartin@example.com",
       password: "password",
       post_cohort_employer: "Dunder-Mifflin",
-      cohort_id: 1
+      cohort_id: 1,
+      avatar: Faker::Avatar.image
     },
     {
       first_name: "Kevin",
@@ -254,7 +284,8 @@ User.create([
       email: "kmalone@example.com",
       password: "password",
       post_cohort_employer: "Malone's Pub",
-      cohort_id: 1
+      cohort_id: 1,
+      avatar: Faker::Avatar.image
     },
     {
       first_name: "Jeff",
@@ -262,7 +293,8 @@ User.create([
       email: "jwinger@example.com",
       password: "password",
       post_cohort_employer: "",
-      cohort_id: 4
+      cohort_id: 4,
+      avatar: Faker::Avatar.image
     },
     {
       first_name: "Troy",
@@ -270,7 +302,8 @@ User.create([
       email: "tbarnes@example.com",
       password: "password",
       post_cohort_employer: "",
-      cohort_id: 4
+      cohort_id: 4,
+      avatar: Faker::Avatar.image
     }
   ])
 

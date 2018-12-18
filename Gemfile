@@ -26,6 +26,8 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'jwt'
 # User rack-cors to allow cross-orgin referencing
 gem 'rack-cors', require: 'rack/cors'
+# User Faker to generate fake user data
+gem 'faker'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'

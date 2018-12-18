@@ -4,4 +4,5 @@ json.array! @cohorts.each do |cohort|
   json.start cohort.start
   json.end cohort.end
   json.owner cohort.owner_visible
+  
 end
