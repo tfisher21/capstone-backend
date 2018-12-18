@@ -5,8 +5,10 @@ class Api::SmsController < ApplicationController
     account_sid = ENV["twilio_account_sid"]
     auth_token = ENV["twilio_auth_token"]
     phone_number = ENV["twilio_phone_number"]
+    location_name = params["name"]
+    location_address = params["address"]
 
-    body = "Hey! #{current_user.first_name} #{current_user.last_name}, from the #{current_user.cohort.name} cohort at Actualize, would like to buy you coffee. Can you make it? Reply with Y/N"
+    body = "Hey! #{current_user.first_name} #{current_user.last_name}, from the #{current_user.cohort.name} cohort at Actualize, would like to buy you coffee at #{location_name} on #{location_address}. Can you make it? Reply with Y/N"
     client = Twilio::REST::Client.new(account_sid, auth_token)
 
     message = client.messages.create(
