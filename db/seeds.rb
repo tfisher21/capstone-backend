@@ -338,29 +338,59 @@ Cohort.create([
 # Posts
 Post.create!([
     {
-      title: "First Comment",
-      content: "This is the first comment of our social network",
+      title: "Welcome to Actualize.Social",
+      content: "We are going to do great things here. You will all be excellent developers set up to change the world. 
+
+      Meggings heirloom photo booth air plant farm-to-table seitan DIY portland plaid crucifix. VHS synth jean shorts, squid next level master cleanse kale chips intelligentsia gochujang iceland lyft umami. Edison bulb selvage dreamcatcher aesthetic brunch pickled swag. Iceland church-key disrupt truffaut intelligentsia. Shabby chic heirloom retro street art, chicharrones listicle tacos typewriter brooklyn irony blog kickstarter.
+
+      Cliche typewriter twee stumptown shabby chic. Tattooed hexagon offal, adaptogen humblebrag irony narwhal kitsch hammock master cleanse health goth hot chicken lomo butcher iceland. Chicharrones whatever deep v, vice succulents meggings vape. Squid banjo small batch, tousled copper mug fashion axe fixie edison bulb pitchfork mixtape.",
       user_id: 23
     },
     {
-      title: "Cohort Name",
-      content: "I really love the name of our cohort!",
-      user_id: 14
+      title: "Would I recommend learning modern JavaScript?",
+      content: "If you’re interested in frontend web development, I would say you almost have no choice. JavaScript is everywhere at this point and not knowing it limits a lot of what you can do. I’m hoping this article demystifies the process, it’s not as hard to learn as some people make it out to be, at least if you have an understanding of the purpose of each tool.
+      However, if you feel like “old school” JavaScript meets your needs, then stick with it! I wrote a series on creating the same app using jQuery, Vue.js, React, and Elm, and not all of those approaches requires understanding modern JavaScript — for some of them you can just throw in a script tag and you’re good to go!
+
+      **Borrowed From Peter Jang**",
+      user_id: 10
     },
     {
-      title: "Instructor",
-      content: "I can't believe our instructor has done a previous cohort!",
+      title: "How to think of great ideas for your capstone.",
+      content: "The first thing I do is find some good appreviations. Then I develop a theme. Finally I figure out what the capstone will do. That's least important.",
+      user_id: 10
+    },
+    {
+      title: "Speaking Freely",
+      content: "Lorem ipsum dolor amet hexagon PBR&B air plant hella drinking vinegar scenester lomo. Leggings bicycle rights bespoke, PBR&B portland ennui cold-pressed. Tumblr selfies schlitz PBR&B. Chartreuse lo-fi poke bushwick occupy knausgaard. Cardigan normcore scenester skateboard tofu vaporware venmo.",
       user_id: 4
     },
     {
-      title: "Loose Lips...",
-      content: "Please don't tell anyone I'm attending this bootcamp. I can't let any of my friends know.",
+      title: "Favorite Framework?",
+      content: "Lorem ipsum dolor amet hexagon PBR&B air plant hella drinking vinegar scenester lomo. Leggings bicycle rights bespoke, PBR&B portland ennui cold-pressed. Tumblr selfies schlitz PBR&B. Chartreuse lo-fi poke bushwick occupy knausgaard. Cardigan normcore scenester skateboard tofu vaporware venmo.",
       user_id: 32
     },
     {
       title: "Demo",
-      content: "We are demoing a new post",
+      content: "Lorem ipsum dolor amet hexagon PBR&B air plant hella drinking vinegar scenester lomo. Leggings bicycle rights bespoke, PBR&B portland ennui cold-pressed. Tumblr selfies schlitz PBR&B. Chartreuse lo-fi poke bushwick occupy knausgaard. Cardigan normcore scenester skateboard tofu vaporware venmo.",
       user_id: 33
+    },
+    {
+      title: "What time does everyone leave?",
+      content: "Lorem ipsum dolor amet edison bulb schlitz hashtag, green juice migas quinoa scenester direct trade. Bitters slow-carb gluten-free polaroid, pok pok small batch offal hammock enamel pin pork belly blue bottle DIY. Artisan leggings kinfolk mumblecore palo santo normcore. Chillwave farm-to-table everyday carry artisan flexitarian crucifix put a bird on it poutine. Jean shorts retro everyday carry letterpress. Asymmetrical crucifix bushwick cred tbh pabst post-ironic hexagon lo-fi skateboard pork belly semiotics mumblecore.
+      Meditation poutine try-hard williamsburg. YOLO bitters leggings offal poutine listicle. Neutra godard church-key, occupy try-hard truffaut letterpress swag bespoke literally unicorn adaptogen farm-to-table slow-carb. Aesthetic four dollar toast prism retro try-hard live-edge cray plaid tattooed pinterest lyft cloud bread. Tousled fanny pack vexillologist cred +1. Ethical pour-over salvia, DIY migas cold-pressed actually chia. Palo santo tbh woke pinterest thundercats authentic slow-carb fixie forage typewriter keytar lo-fi cloud bread copper mug stumptown.",
+      user_id: 28
+    },
+    {
+      title: "App Ideas",
+      content: "Lorem ipsum dolor amet fanny pack fixie 3 wolf moon street art williamsburg aesthetic banjo post-ironic PBR&B knausgaard selfies vice literally artisan yuccie. Gastropub ramps tumblr hella flannel messenger bag blog leggings copper mug church-key deep v listicle cliche. Ugh copper mug meditation kale chips, cronut vegan marfa brooklyn truffaut hell of chia hammock DIY. Bushwick four loko iPhone, paleo unicorn tattooed venmo normcore wayfarers distillery. Helvetica locavore yr adaptogen tumeric air plant, four dollar toast biodiesel cred forage typewriter narwhal mumblecore. Succulents food truck craft beer godard next level mustache readymade chartreuse XOXO echo park humblebrag +1.
+      Narwhal pour-over disrupt asymmetrical chillwave austin selvage stumptown pug seitan hoodie. Shoreditch enamel pin mixtape heirloom taiyaki pour-over normcore yuccie wayfarers iPhone locavore. Pabst activated charcoal blue bottle disrupt. Pop-up bicycle rights jean shorts cold-pressed.
+      VHS ennui 3 wolf moon schlitz blue bottle scenester williamsburg. Brooklyn kogi 3 wolf moon art party raclette. Biodiesel schlitz letterpress banh mi, edison bulb jean shorts tattooed. Single-origin coffee marfa pitchfork, intelligentsia gentrify glossier gastropub austin jean shorts gochujang coloring book humblebrag lo-fi fixie pork belly. Swag kinfolk narwhal keffiyeh unicorn gluten-free, occupy cray etsy beard direct trade synth tilde.",
+      user_id: 10
+    },
+    {
+      title: "How to think of great ideas for your capstone.",
+      content: "The first thing I do is find some good appreviations. Then I develop a theme. Finally I figure out what the capstone will do. That's least important.",
+      user_id: 10
     }
   ])
 
@@ -372,7 +402,7 @@ PostComment.create([
       post_id: 1
     },
     {
-      content: "It is a good post",
+      content: "This is a truly remarkable response to a common question. Just wow!",
       user_id: 30,
       post_id: 1
     },
@@ -400,5 +430,21 @@ PostComment.create([
       content: "This is a bad demo",
       user_id: 32,
       post_id: 5
-    }
+    },
+    {
+      content: "Do you think it is still relevant with the empahsis on frameworks?",
+      user_id: 4,
+      post_id: 1
+    },
+    {
+      content: "How can you truly understand a framework if you don't understand what makes it work?",
+      user_id: 10,
+      post_id: 1
+    },
+    {
+      content: "Don't get me wrong, I still think you can get by without, but you'll be a better developer if you spend some time on modern js.",
+      user_id: 10,
+      post_id: 1
+    },
+
   ])
