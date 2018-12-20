@@ -347,17 +347,15 @@ Post.create!([
       user_id: 23
     },
     {
-      title: "Would I recommend learning modern JavaScript?",
-      content: "If you’re interested in frontend web development, I would say you almost have no choice. JavaScript is everywhere at this point and not knowing it limits a lot of what you can do. I’m hoping this article demystifies the process, it’s not as hard to learn as some people make it out to be, at least if you have an understanding of the purpose of each tool.
-      However, if you feel like “old school” JavaScript meets your needs, then stick with it! I wrote a series on creating the same app using jQuery, Vue.js, React, and Elm, and not all of those approaches requires understanding modern JavaScript — for some of them you can just throw in a script tag and you’re good to go!
-
-      **Borrowed From Peter Jang**",
-      user_id: 10
-    },
-    {
       title: "How to think of great ideas for your capstone.",
       content: "The first thing I do is find some good appreviations. Then I develop a theme. Finally I figure out what the capstone will do. That's least important.",
       user_id: 10
+    },
+    {
+      title: "What time does everyone leave?",
+      content: "Lorem ipsum dolor amet edison bulb schlitz hashtag, green juice migas quinoa scenester direct trade. Bitters slow-carb gluten-free polaroid, pok pok small batch offal hammock enamel pin pork belly blue bottle DIY. Artisan leggings kinfolk mumblecore palo santo normcore. Chillwave farm-to-table everyday carry artisan flexitarian crucifix put a bird on it poutine. Jean shorts retro everyday carry letterpress. Asymmetrical crucifix bushwick cred tbh pabst post-ironic hexagon lo-fi skateboard pork belly semiotics mumblecore.
+      Meditation poutine try-hard williamsburg. YOLO bitters leggings offal poutine listicle. Neutra godard church-key, occupy try-hard truffaut letterpress swag bespoke literally unicorn adaptogen farm-to-table slow-carb. Aesthetic four dollar toast prism retro try-hard live-edge cray plaid tattooed pinterest lyft cloud bread. Tousled fanny pack vexillologist cred +1. Ethical pour-over salvia, DIY migas cold-pressed actually chia. Palo santo tbh woke pinterest thundercats authentic slow-carb fixie forage typewriter keytar lo-fi cloud bread copper mug stumptown.",
+      user_id: 28
     },
     {
       title: "Speaking Freely",
@@ -375,10 +373,12 @@ Post.create!([
       user_id: 33
     },
     {
-      title: "What time does everyone leave?",
-      content: "Lorem ipsum dolor amet edison bulb schlitz hashtag, green juice migas quinoa scenester direct trade. Bitters slow-carb gluten-free polaroid, pok pok small batch offal hammock enamel pin pork belly blue bottle DIY. Artisan leggings kinfolk mumblecore palo santo normcore. Chillwave farm-to-table everyday carry artisan flexitarian crucifix put a bird on it poutine. Jean shorts retro everyday carry letterpress. Asymmetrical crucifix bushwick cred tbh pabst post-ironic hexagon lo-fi skateboard pork belly semiotics mumblecore.
-      Meditation poutine try-hard williamsburg. YOLO bitters leggings offal poutine listicle. Neutra godard church-key, occupy try-hard truffaut letterpress swag bespoke literally unicorn adaptogen farm-to-table slow-carb. Aesthetic four dollar toast prism retro try-hard live-edge cray plaid tattooed pinterest lyft cloud bread. Tousled fanny pack vexillologist cred +1. Ethical pour-over salvia, DIY migas cold-pressed actually chia. Palo santo tbh woke pinterest thundercats authentic slow-carb fixie forage typewriter keytar lo-fi cloud bread copper mug stumptown.",
-      user_id: 28
+      title: "Would I recommend learning modern JavaScript?",
+      content: "If you’re interested in frontend web development, I would say you almost have no choice. JavaScript is everywhere at this point and not knowing it limits a lot of what you can do. I’m hoping this article demystifies the process, it’s not as hard to learn as some people make it out to be, at least if you have an understanding of the purpose of each tool.
+      However, if you feel like “old school” JavaScript meets your needs, then stick with it! I wrote a series on creating the same app using jQuery, Vue.js, React, and Elm, and not all of those approaches requires understanding modern JavaScript — for some of them you can just throw in a script tag and you’re good to go!
+
+      **Borrowed From Peter Jang**",
+      user_id: 10
     },
     {
       title: "App Ideas",
@@ -404,7 +404,7 @@ PostComment.create([
     {
       content: "This is a truly remarkable response to a common question. Just wow!",
       user_id: 30,
-      post_id: 1
+      post_id: 7
     },
     {
       content: "I prefer our cohort name",
@@ -434,17 +434,17 @@ PostComment.create([
     {
       content: "Do you think it is still relevant with the empahsis on frameworks?",
       user_id: 4,
-      post_id: 1
+      post_id: 7
     },
     {
       content: "How can you truly understand a framework if you don't understand what makes it work?",
       user_id: 10,
-      post_id: 1
+      post_id: 7
     },
     {
       content: "Don't get me wrong, I still think you can get by without, but you'll be a better developer if you spend some time on modern js.",
       user_id: 10,
-      post_id: 1
+      post_id: 7
     },
 
   ])
