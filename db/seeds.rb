@@ -385,12 +385,12 @@ Post.create!([
       content: "Lorem ipsum dolor amet fanny pack fixie 3 wolf moon street art williamsburg aesthetic banjo post-ironic PBR&B knausgaard selfies vice literally artisan yuccie. Gastropub ramps tumblr hella flannel messenger bag blog leggings copper mug church-key deep v listicle cliche. Ugh copper mug meditation kale chips, cronut vegan marfa brooklyn truffaut hell of chia hammock DIY. Bushwick four loko iPhone, paleo unicorn tattooed venmo normcore wayfarers distillery. Helvetica locavore yr adaptogen tumeric air plant, four dollar toast biodiesel cred forage typewriter narwhal mumblecore. Succulents food truck craft beer godard next level mustache readymade chartreuse XOXO echo park humblebrag +1.
       Narwhal pour-over disrupt asymmetrical chillwave austin selvage stumptown pug seitan hoodie. Shoreditch enamel pin mixtape heirloom taiyaki pour-over normcore yuccie wayfarers iPhone locavore. Pabst activated charcoal blue bottle disrupt. Pop-up bicycle rights jean shorts cold-pressed.
       VHS ennui 3 wolf moon schlitz blue bottle scenester williamsburg. Brooklyn kogi 3 wolf moon art party raclette. Biodiesel schlitz letterpress banh mi, edison bulb jean shorts tattooed. Single-origin coffee marfa pitchfork, intelligentsia gentrify glossier gastropub austin jean shorts gochujang coloring book humblebrag lo-fi fixie pork belly. Swag kinfolk narwhal keffiyeh unicorn gluten-free, occupy cray etsy beard direct trade synth tilde.",
-      user_id: 10
+      user_id: 31
     },
     {
       title: "How to think of great ideas for your capstone.",
       content: "The first thing I do is find some good appreviations. Then I develop a theme. Finally I figure out what the capstone will do. That's least important.",
-      user_id: 10
+      user_id: 19
     }
   ])
 
